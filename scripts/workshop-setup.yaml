@@ -48,9 +48,9 @@ shellTasks:
 
 
 vaultInfo:
-  vaultHost: https://35.227.66.33
+  vaultHost: 
   validateSsl: false
-  authStr: eyJwYXNzd29yZCI6IkMxc2MwMTIzIyJ9
+  authStr: 
   uriPaths:
     - name: auth
       value: /v1/auth/userpass/login/cloud-team
