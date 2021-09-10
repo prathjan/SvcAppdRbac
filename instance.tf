@@ -12,7 +12,7 @@ data "terraform_remote_state" "appvm" {
 data "terraform_remote_state" "saasvm" {
   backend = "remote"
   config = {
-    organization = "Lab14"
+    organization = var.org
     workspaces = {
       name = var.saaswsname
     }
@@ -22,7 +22,7 @@ data "terraform_remote_state" "saasvm" {
 data "terraform_remote_state" "global" {
   backend = "remote"
   config = {
-    organization = "Lab14"
+    organization = var.org
     workspaces = {
       name = var.globalwsname
     }
