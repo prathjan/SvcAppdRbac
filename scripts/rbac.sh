@@ -1,4 +1,5 @@
 apt install dos2unix -y
+rm -rf /home/ec2-user
 mkdir -p /home/ec2-user/environment/workshop/
 cp /tmp/devnet-controller-setup.zip /home/ec2-user/environment/workshop 
 #cd /home/ec2-user/environment/workshop
