@@ -71,6 +71,8 @@ resource "null_resource" "vm_node_init" {
         "echo replacement",
         "echo ${local.install} > /tmp/installcmd.sh",
         "sed 's/fillmein/'$APPDYNAMICS_AGENT_ACCOUNT_ACCESS_KEY'/g' /tmp/installcmd.sh > /tmp/installexec.sh",
+	"/opt/appdynamics/zeroagent/bin/zeroctl uninstall",
+	"rm -rf /opt/appdynamics/zeroagent",
         "chmod +x /tmp/installexec.sh",
         "echo installing",
         "/tmp/installexec.sh",
