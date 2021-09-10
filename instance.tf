@@ -2,7 +2,7 @@
 data "terraform_remote_state" "appvm" {
   backend = "remote"
   config = {
-    organization = "Lab14"
+    organization = var.org 
     workspaces = {
       name = var.appvmwsname
     }
@@ -29,6 +29,9 @@ data "terraform_remote_state" "global" {
   }
 }
 
+variable "org" {
+  type = string
+}
 variable "appvmwsname" {
   type = string
 }
