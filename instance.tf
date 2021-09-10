@@ -19,13 +19,25 @@ data "terraform_remote_state" "saasvm" {
   }
 }
 
+data "terraform_remote_state" "global" {
+  backend = "remote"
+  config = {
+    organization = "Lab14"
+    workspaces = {
+      name = var.globalwsname
+    }
+  }
+}
 
 variable "appvmwsname" {
   type = string
 }
 
-// The zero agent version
 variable "saaswsname" {
+  type = string
+}
+
+variable "globalwsname" {
   type = string
 }
 
